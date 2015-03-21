@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
+<script type="text/javascript" src="js/jcanvas.min.js"></script>
+<script type="text/javascript" src="js/quintus.js"></script>
+<script type="text/javascript" src="js/quintus_ui.js"></script>
+<script type="text/javascript" src="js/quintus_sprites.js"></script>
+<script type="text/javascript" src="js/quintus_scenes.js"></script>
+<script type="text/javascript" src="js/quintus_input.js"></script>
+<script type="text/javascript" src="js/quintus_2d.js"></script>
+<script type="text/javascript" src="js/quintus_touch.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+var Q = Quintus()
+	.include( "Sprites, Scenes, Input, 2D, Touch, UI" )
+	.setup({ maximize: true })
+	.controls()
+	.touch()
+	
+Q.scene( "menu", function( stage ) {
+	var container = stage.insert( new Q.UI.Container({
+		x: Q.width / 2, 
+		y: Q.height / 2, 
+		fill: "rgba(0,255,0,0.5)"
+	}));
+		
+	var buttonStart = container.insert( new Q.UI.Button({
+		x: 30,
+		y: 30,
+		fill: "#CCCCCC",
+		label: "Start Game"
+	}));
+
+	buttonStart.on( "click", function() {
+		Q.clearStages();
+		Q.stageScene( "level1" );
+	});
+
+	container.fit( 20 );
+});
+
+Q.scene( "level_1", function( stage ) {
+	
+	
+});
+
+
+Q.stageScene( "menu" );
+
+
+</script>
+</body>
+</html>
