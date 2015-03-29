@@ -10,12 +10,15 @@
 <script type="text/javascript" src="js/quintus_input.js"></script>
 <script type="text/javascript" src="js/quintus_2d.js"></script>
 <script type="text/javascript" src="js/quintus_touch.js"></script>
+<script type="text/javascript" src="js/quintus_tmx.js"></script>
+<script type="text/javascript" src="js/quintus_anim.js"></script>
+<script type="text/javascript" src="js/quintus_audio.js"></script>
 </head>
 <body>
 <script type="text/javascript">
 
 var Q = Quintus()
-	.include( "Sprites, Scenes, Input, 2D, Touch, UI" )
+	.include( "Sprites, Scenes, Input, 2D, TMX, Touch, UI" )
 	.setup({ maximize: true })
 	.controls()
 	.touch()
@@ -36,19 +39,20 @@ Q.scene( "menu", function( stage ) {
 
 	buttonStart.on( "click", function() {
 		Q.clearStages();
-		Q.stageScene( "level1" );
+		Q.stageScene( "level_1" );
 	});
 
 	container.fit( 20 );
 });
 
 Q.scene( "level_1", function( stage ) {
-	
-	
+	Q.stageTMX( "level_1.tmx", stage );	
 });
 
+Q.loadTMX( "level_1.tmx", function() {
+	Q.stageScene( "menu" );
+});
 
-Q.stageScene( "menu" );
 
 
 </script>
