@@ -9,5 +9,13 @@ Q.Sprite.extend( "Player", {
 		});
 		
 		this.add( "2d, platformerControls" );
+		
+		this.on("hit.sprite",function(collision) {
+		if(collision.obj.isA("Finish")) {
+			this.destroy();
+			Q.clearStages();
+			Q.stageScene("Endgame");
+		}
+    });
 	}
 });

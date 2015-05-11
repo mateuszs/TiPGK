@@ -29,17 +29,30 @@ var Q = Quintus()
 </script>
 <script type="text/javascript" src="js/settings.js"></script>
 <script type="text/javascript" src="js/objects/player.js"></script>
+<script type="text/javascript" src="js/objects/enemy.js"></script>
+<script type="text/javascript" src="js/objects/finish.js"></script>
+<script type="text/javascript" src="js/objects/gem.js"></script>
 <script type="text/javascript" src="js/scenes/menu.js"></script>
+<script type="text/javascript" src="js/scenes/gravity.js"></script>
 <script type="text/javascript" src="js/scenes/level_1.js"></script>
-<script type="text/javascript" src="js/load_game.js"></script>
+<script type="text/javascript" src="js/scenes/level_2.js"></script>
+<script type="text/javascript" src="js/scenes/level_tmx.js"></script>
+<script type="text/javascript" src="js/scenes/endgame.js"></script>
+<!-- <script type="text/javascript" src="js/load_game.js"></script> -->
 <script type="text/javascript">
 /**
 * Loading components and game loop
 */
-Q.load( "tiles.jpg, level_1.json, level_1_background.jpg, player.png", function() {
+Q.load( "tiles.jpg, tiles_castle.png, level_1_background.jpg, background.png, player.png, spike.png, gem.png, portal.png, level_0.json, level_1.json, level_tmx.tmx", function() {
 	Q.sheet( "tiles","tiles.jpg", { 
-		tilew: 50, 
-		tileh: 50
+		tilew: 32, 
+		tileh: 32,
+		sx: 1,
+		sy: 1,
+	});
+	Q.sheet( "tiles_castle","tiles_castle.png", { 
+		tileW: 16, 
+		tileH: 16,
 	});
 	Q.stageScene( "Menu" );
 });
