@@ -1,5 +1,5 @@
 /**
-* Player class definition
+* Enemies class definition
 */
 Q.Sprite.extend( "Enemy", {
 	init: function( parameters ) {
@@ -10,7 +10,8 @@ Q.Sprite.extend( "Enemy", {
 		this.add( "2d" );
 	},
 	
-	step: function(dt) {
+	step: function( dt ) {
 		this.stage.collide( this );
 	}
 });
+

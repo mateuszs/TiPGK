@@ -6,14 +6,22 @@ Q.Sprite.extend( "Player", {
 		this._super( parameters, {
 			health: 100,
 			asset: "player.png",
+			x: 200
 		});
 		
 		this.add( "2d, platformerControls" );
 		this.on( "hit", this, "collision" );
+		
+		Q.input.on( "skills", this, "openSkills" );
+	},
+	
+	openSkills: function() {
+		Q.stage().pause();
+		Q.stageScene( "Skills", 1 );			
 	},
 	
 	collision: function( col ) {
-		console.log( col.obj );
+		
 	},
 	
 	step: function( dt ) {

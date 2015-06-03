@@ -26,12 +26,20 @@ var Q = Quintus()
 	.controls()
 	.touch()
 
+Q.input.keyboardControls({
+	E: "inventory",
+	S: "skills"
+});
+	
 </script>
+<link rel="stylesheet" href="css/style.css">
 <script type="text/javascript" src="js/settings.js"></script>
 <script type="text/javascript" src="js/objects/player.js"></script>
 <script type="text/javascript" src="js/objects/enemy.js"></script>
 <script type="text/javascript" src="js/scenes/menu.js"></script>
 <script type="text/javascript" src="js/scenes/level_1.js"></script>
+<script type="text/javascript" src="js/scenes/stats.js"></script>
+<script type="text/javascript" src="js/scenes/skills.js"></script>
 <script type="text/javascript">
 /**
 * Loading components and game loop
@@ -42,7 +50,13 @@ Q.load( "tiles.jpg, level_1.json, level_1_background.jpg, player.png, enemy.jpeg
 		tileh: 50
 	});
 	Q.stageScene( "Menu" );
+
 });
 </script>
+
+<div id="stats">
+	<div id="experience"></div>
+	<div id="health"></div>	
+</div>
 </body>
 </html>

@@ -10,7 +10,6 @@ Q.scene( "Level_1", function( stage ) {
 	}));
 	
 	var player = new Q.Player();
-	
 	var enemy = new Q.Enemy();
 	
 	stage.insert( player );
@@ -25,4 +24,6 @@ Q.scene( "Level_1", function( stage ) {
 	
 	stage.viewport.offsetX = 0;
     stage.viewport.scale = 1.0;
+	
+	Q.stageScene( "Stats", 1 );
 });

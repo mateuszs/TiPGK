@@ -1,0 +1,17 @@
+#stats {
+	width: 100%; 
+	height: 50px; 	
+	position: absolute; 
+	top: 10px; 
+	left: 20px; 
+	display: none;
+}
+
+#experience {
+	float: left;
+}
+
+#health {
+	float: left;
+	margin-left: 50px;
+}
