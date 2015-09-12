@@ -36,11 +36,10 @@ Q.input.keyboardControls({
 <script type="text/javascript" src="js/settings.js"></script>
 <script type="text/javascript" src="js/objects/player.js"></script>
 <script type="text/javascript" src="js/objects/enemy.js"></script>
-<script type="text/javascript" src="js/objects/finish.js"></script>
+<script type="text/javascript" src="js/objects/portal.js"></script>
 <script type="text/javascript" src="js/objects/gem.js"></script>
 <script type="text/javascript" src="js/scenes/menu.js"></script>
 <script type="text/javascript" src="js/scenes/endgame.js"></script>
-<script type="text/javascript" src="js/scenes/level_1.js"></script>
 <script type="text/javascript" src="js/scenes/lvl1.js"></script>
 <script type="text/javascript" src="js/scenes/stats.js"></script>
 <script type="text/javascript" src="js/scenes/skills.js"></script>
@@ -48,7 +47,8 @@ Q.input.keyboardControls({
 /**
 * Loading components and game loop
 */
-Q.load( "tiles.jpg, tiles_castle.png, level_1.json, level_1_background.jpg, player.png, enemy.jpeg, bullet.jpeg, gate.png, lvl1.tmx, background.png, spike.png, gem.png, portal.png", function() {
+
+Q.load( "tiles.jpg, tiles_castle.png, level_1.json, level_1_background.jpg, player.png, enemy.jpeg, bullet.jpeg, lvl1.tmx, background.png, gem.png, portal.png", function() {
 	Q.sheet( "tiles","tiles.jpg", { 
 		tilew: 50, 
 		tileh: 50
@@ -60,6 +60,7 @@ Q.load( "tiles.jpg, tiles_castle.png, level_1.json, level_1_background.jpg, play
 	Q.stageScene( "Menu" );
 	
 	Q.state.set( "healths", 5 );
+	Q.state.set( "score", 0 );
 });
 </script>
 

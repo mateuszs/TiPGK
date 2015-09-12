@@ -24,13 +24,7 @@ Q.Sprite.extend( "Spike", {
 		});
     
 		this.add( "2d" );
-		
-		this.on("bump.left,bump.right,bump.bottom,bump.top",function(collision) {
-			if(collision.obj.isA("Player")) {
-				Q.clearStages();
-				Q.stageScene("Menu");
-			}
-		});
+
 	}
 });
 

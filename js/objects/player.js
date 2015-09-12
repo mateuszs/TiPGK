@@ -21,7 +21,7 @@ Q.Sprite.extend( "Player", {
 	},
 	
 	collision: function( col ) {
-		if( col.obj.isA( "EnemySoldier" )) {
+		if( col.obj.isA( "EnemySoldier" ) || col.obj.isA( "Spike" )) {
 			Q.state.dec( "healths", 1 );
 			this.destroy();
 			
@@ -30,7 +30,8 @@ Q.Sprite.extend( "Player", {
 		}
 		
 		if( Q.state.get( "healths" ) == 0 ) {
-			
+			Q.clearStages();
+			Q.stageScene('Endgame');			
 		} else {
 		
 		}
@@ -38,5 +39,16 @@ Q.Sprite.extend( "Player", {
 	
 	step: function( dt ) {
 		this.stage.collide( this );
+		
+		// if( this.p.vx > 0 ) {
+			// this.play( "run_right" );
+		// } else if( this.p.vx < 0 ) {
+			// this.play( "run_left" );
+		// } 		
 	}
 });
+
+// Q.animations('player', {
+	// run_right: { frames: [7,6,5,4,3,2,1], rate: 1/15}, 
+	// run_left: { frames: [19,18,17,16,15], rate: 1/15 }
+// });
