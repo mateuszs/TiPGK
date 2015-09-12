@@ -21,7 +21,7 @@ Q.Sprite.extend( "Player", {
 	},
 	
 	collision: function( col ) {
-		if( col.obj.isA( "EnemySoldier" )) {			
+		if( col.obj.isA( "EnemySoldier" )) {
 			Q.state.dec( "healths", 1 );
 			this.destroy();
 		}
@@ -30,7 +30,13 @@ Q.Sprite.extend( "Player", {
 			
 		} else {
 		
-		}		
+		};
+		
+		if( col.obj.isA( "Finish" )) {
+			this.destroy();
+			Q.clearStages();
+			Q.stageScene("Endgame");
+		}
 	},
 	
 	step: function( dt ) {

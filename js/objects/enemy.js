@@ -16,6 +16,24 @@ Q.Sprite.extend( "EnemySoldier", {
 	}
 });
 
+Q.Sprite.extend( "Spike", {
+	init: function( parameters ) {
+		this._super( parameters, {
+			sheet: "tiles_castle",
+			frame: 226
+		});
+    
+		this.add( "2d" );
+		
+		this.on("bump.left,bump.right,bump.bottom,bump.top",function(collision) {
+			if(collision.obj.isA("Player")) {
+				Q.clearStages();
+				Q.stageScene("Menu");
+			}
+		});
+	}
+});
+
 // Q.Sprite.extend( "Bullet", {
 	// init: function( parameters ) {
 		// this._super( parameters, {
