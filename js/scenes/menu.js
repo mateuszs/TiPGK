@@ -50,6 +50,33 @@ Q.scene( "Menu", function( stage ) {
 		label: "mniejsza"
 	}));
 	
+	var text = container.insert( new Q.UI.Text({
+		x: 150,
+		y: 270,
+		label: "Paralaksa"
+	}));
+
+	var buttonparnone = container.insert( new Q.UI.Button({
+		x: 0,
+		y: 330,
+		fill: "#CCCCCC",
+		label: "brak"
+	}));
+
+	var buttonparplus = container.insert( new Q.UI.Button({
+		x: 150,
+		y: 330,
+		fill: "#CCCCCC",
+		label: "dodatnia"
+	}));
+
+	var buttonparminus = container.insert( new Q.UI.Button({
+		x: 300,
+		y: 330,
+		fill: "#CCCCCC",
+		label: "ujemna"
+	}));
+	
 	buttonStart1.on( "click", function() {
 		Q.clearStages();
 		Q.stageScene( "Level_1" );
@@ -73,6 +100,21 @@ Q.scene( "Menu", function( stage ) {
 	buttongdec.on( "click", function() {
 		Q.clearStages();
 		Q.stageScene( "gdec" );
+	});
+
+	buttonparnone.on( "click", function() {
+		Q.clearStages();
+		Q.stageScene( "parnone" );
+	});
+
+	buttonparplus.on( "click", function() {
+		Q.clearStages();
+		Q.stageScene( "parplus" );
+	});
+
+	buttonparminus.on( "click", function() {
+		Q.clearStages();
+		Q.stageScene( "parminus" );
 	});
 
 	container.fit( 20 );

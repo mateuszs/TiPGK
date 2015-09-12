@@ -5,7 +5,7 @@ Q.scene( "Level_1", function( stage ) {
 	Q.state.set("score", 0);
 	
 	stage.insert( new Q.Repeater({ 
-		asset: "level_1_background.jpg",
+		asset: "background.png",
 	    speedX: 0.5,
 	    speedY: 0.5,
 	    scale: 1 
@@ -25,6 +25,9 @@ Q.scene( "Level_1", function( stage ) {
 	
 	stage.insert(new Q.Spike({ x: 48, y: 304 }));
 	stage.insert(new Q.Spike({ x: 544, y: 368 }));
+	stage.insert(new Q.Spike({ x: 560, y: 368 }));
+	stage.insert(new Q.Spike({ x: 576, y: 368 }));
+	stage.insert(new Q.Spike({ x: 592, y: 368 }));
 	
 	stage.insert(new Q.Finish({ x: 900, y: 368}));
 	

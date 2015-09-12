@@ -16,6 +16,7 @@ Q.scene( "Level_tmx", function( stage ) {
 	
 	var player = Q("Player").first();
 	
-	stage.add( "viewport" ).follow( player, { x:true, y:false } );
-	stage.viewport.offsetX = -200;
+	stage.add( "viewport" ).follow( player, { x:true, y:true } );
+	stage.viewport.offsetX = -300;
+	stage.viewport.offsetX = -300;
 });

@@ -2,10 +2,12 @@
 * Level 1 scene
 */
 Q.scene( "gdef", function( stage ) {
+	Q.state.set("score", 0);
+	
 	stage.insert( new Q.Repeater({ 
-		asset: "level_1_background.jpg",
-	    speedX: 0.5,     
-	    speedY: 0.5,      
+		asset: "background.png",
+	    speedX: 0.5,
+	    speedY: 0.5,
 	    scale: 1,
 	}));
 	
@@ -17,6 +19,7 @@ Q.scene( "gdef", function( stage ) {
 	});
 	
 	stage.insert( player );
+	stage.insert(new Q.Finish({ x: 900, y: 256}));
 	
 	stage.collisionLayer( new Q.TileLayer({ 
 		dataAsset: "level_0.json",
@@ -30,8 +33,10 @@ Q.scene( "gdef", function( stage ) {
 });
 
 Q.scene( "ginc", function( stage ) {
+	Q.state.set("score", 0);
+	
 	stage.insert( new Q.Repeater({ 
-		asset: "level_1_background.jpg",
+		asset: "background.png",
 	    speedX: 0.5,     
 	    speedY: 0.5,      
 	    scale: 1,
@@ -45,6 +50,7 @@ Q.scene( "ginc", function( stage ) {
 	});
 	
 	stage.insert( player );
+	stage.insert(new Q.Finish({ x: 900, y: 256}));
 	
 	stage.collisionLayer( new Q.TileLayer({ 
 		dataAsset: "level_0.json",
@@ -58,14 +64,15 @@ Q.scene( "ginc", function( stage ) {
 });
 
 Q.scene( "gdec", function( stage ) {
+	Q.state.set("score", 0);
 	stage.insert( new Q.Repeater({ 
-		asset: "level_1_background.jpg",
+		asset: "background.png",
 	    speedX: 0.5,     
 	    speedY: 0.5,      
 	    scale: 1,
 	}));
 	
-	Q.gravityY -= 200;
+	Q.gravityY = 200;
 	
 	var player = new Q.Player({
 		x: 50,
@@ -73,6 +80,7 @@ Q.scene( "gdec", function( stage ) {
 	});
 	
 	stage.insert( player );
+	stage.insert(new Q.Finish({ x: 900, y: 256}));
 	
 	stage.collisionLayer( new Q.TileLayer({ 
 		dataAsset: "level_0.json",
