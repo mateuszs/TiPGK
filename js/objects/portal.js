@@ -6,8 +6,7 @@ Q.Sprite.extend( "Portal", {
 		this._super( parameters, {
 			asset: "portal.png",
 		});
-		
-		this.add( "2d, platformerControls" );
+
 		this.on( "hit", this, "collision" );		
 		
 	},
