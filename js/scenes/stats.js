@@ -4,10 +4,10 @@
 Q.scene( "Stats", function( stage ){
 	var gameStats 	= $( "#stats" );	
 	var exp 		= $( "#experience" );
-	var health 		= $( "#health" );
+	var healths 	= $( "#healths" );
 	
 	exp.html( "Exp: 0" );
-	health.html( "HP: 0" );
+	healths.html( "Healths: " + Q.state.get( "healths" ));
 	
 	gameStats.show();
 
@@ -15,7 +15,7 @@ Q.scene( "Stats", function( stage ){
         
     });
 	
-	Q.state.on( "change.hp" , this, function() {
-        
+	Q.state.on( "change.healths" , this, function() {
+        healths.html( "Healths: " + Q.state.get( "healths" ));
     });	
 });

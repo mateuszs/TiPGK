@@ -4,7 +4,7 @@
 Q.Sprite.extend( "Player", {
 	init: function( parameters ) {
 		this._super( parameters, {
-			health: 100,
+			healths: 5,
 			asset: "player.png",
 			x: 200
 		});
@@ -21,7 +21,16 @@ Q.Sprite.extend( "Player", {
 	},
 	
 	collision: function( col ) {
+		if( col.obj.isA( "EnemySoldier" )) {			
+			Q.state.dec( "healths", 1 );
+			this.destroy();
+		}
 		
+		if( Q.state.get( "healths" ) == 0 ) {
+			
+		} else {
+		
+		}		
 	},
 	
 	step: function( dt ) {

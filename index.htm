@@ -44,7 +44,7 @@ Q.input.keyboardControls({
 /**
 * Loading components and game loop
 */
-Q.load( "tiles.jpg, level_1.json, level_1_background.jpg, player.png, enemy.jpeg", function() {
+Q.load( "tiles.jpg, level_1.json, level_1_background.jpg, player.png, enemy.jpeg, bullet.jpeg", function() {
 	Q.sheet( "tiles","tiles.jpg", { 
 		tilew: 50, 
 		tileh: 50
@@ -56,7 +56,7 @@ Q.load( "tiles.jpg, level_1.json, level_1_background.jpg, player.png, enemy.jpeg
 
 <div id="stats">
 	<div id="experience"></div>
-	<div id="health"></div>	
+	<div id="healths"></div>	
 </div>
 </body>
 </html>
