@@ -9,8 +9,6 @@ Q.scene( "Level_1", function( stage ) {
 	    scale: 1 
 	}));
 	
-	Q.state.set( "healths", 5 );
-	
 	var player = new Q.Player();
 	var enemySoldier = new Q.EnemySoldier();
 	

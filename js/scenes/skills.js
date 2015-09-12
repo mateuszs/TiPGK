@@ -15,6 +15,10 @@ Q.scene( "Skills", function( stage ){
 		label: "Close"
 	}));
 	
+	// container.insert( new Q.UI.HTMLElement({
+		// html: "Siema"
+	// }));
+	
 	buttonClose.on( "click", function() {
 		this.destroy();
 		Q.stage().unpause();

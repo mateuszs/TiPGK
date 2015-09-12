@@ -50,12 +50,13 @@ Q.load( "tiles.jpg, level_1.json, level_1_background.jpg, player.png, enemy.jpeg
 		tileh: 50
 	});
 	Q.stageScene( "Menu" );
-
+	
+	Q.state.set( "healths", 5 );
 });
 </script>
 
 <div id="stats">
-	<div id="experience"></div>
+	<div id="gold"></div>
 	<div id="healths"></div>	
 </div>
 </body>

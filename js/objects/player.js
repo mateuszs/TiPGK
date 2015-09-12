@@ -24,12 +24,15 @@ Q.Sprite.extend( "Player", {
 		if( col.obj.isA( "EnemySoldier" )) {			
 			Q.state.dec( "healths", 1 );
 			this.destroy();
+			
+			Q.clearStages();
+			Q.stageScene('Level_1');			
 		}
 		
 		if( Q.state.get( "healths" ) == 0 ) {
 			
 		} else {
-		
+			
 		}		
 	},
 	

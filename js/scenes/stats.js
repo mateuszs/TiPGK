@@ -3,10 +3,10 @@
 */
 Q.scene( "Stats", function( stage ){
 	var gameStats 	= $( "#stats" );	
-	var exp 		= $( "#experience" );
+	var gold 		= $( "#gold" );
 	var healths 	= $( "#healths" );
 	
-	exp.html( "Exp: 0" );
+	gold.html( "Gold: 0" );
 	healths.html( "Healths: " + Q.state.get( "healths" ));
 	
 	gameStats.show();

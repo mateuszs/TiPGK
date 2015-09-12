@@ -16,16 +16,4 @@ Q.Sprite.extend( "EnemySoldier", {
 	}
 });
 
-// Q.Sprite.extend( "Bullet", {
-	// init: function( parameters ) {
-		// this._super( parameters, {
-			// asset: "bullet.jpeg",
-		// });
-		
-		// this.add( "2d animation" );
-	// },
-	
-	// step: function( dt ) {
-		// this.stage.collide( this );
-	// }
-// });
+
