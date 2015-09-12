@@ -40,7 +40,6 @@ Q.input.keyboardControls({
 <script type="text/javascript" src="js/objects/gem.js"></script>
 <script type="text/javascript" src="js/scenes/menu.js"></script>
 <script type="text/javascript" src="js/scenes/endgame.js"></script>
-<script type="text/javascript" src="js/scenes/level_1.js"></script>
 <script type="text/javascript" src="js/scenes/lvl1.js"></script>
 <script type="text/javascript" src="js/scenes/stats.js"></script>
 <script type="text/javascript" src="js/scenes/skills.js"></script>
@@ -58,12 +57,13 @@ Q.load( "tiles.jpg, tiles_castle.png, level_1.json, level_1_background.jpg, play
 		tileH: 16
 	});
 	Q.stageScene( "Menu" );
-
+	Q.state.set( "healths", 5 );
+	Q.state.set( "score", 0 );
 });
 </script>
 
 <div id="stats">
-	<div id="experience"></div>
+	<div id="gold"></div>
 	<div id="healths"></div>	
 </div>
 </body>
