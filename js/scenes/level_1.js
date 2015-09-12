@@ -11,9 +11,11 @@ Q.scene( "Level_1", function( stage ) {
 	
 	var player = new Q.Player();
 	var enemySoldier = new Q.EnemySoldier();
+	var gate = new Q.Gate();
 	
 	stage.insert( player );
 	stage.insert( enemySoldier );
+	stage.insert( gate );
 	
 	stage.collisionLayer( new Q.TileLayer({ 
 		dataAsset: "level_1.json",
