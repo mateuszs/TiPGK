@@ -1,4 +1,4 @@
 /**
 * Settings
 */
-Q.gravityY -= 400
+Q.gravityY -= 450

@@ -31,9 +31,18 @@ Q.Sprite.extend( "Player", {
 			this.destroy();
 			
 			Q.clearStages();
-			Q.stageScene('Lvl1');	
-		} 
+			Q.stageScene('Map');	
+		}
 		
+		if( Q.state.get( "healths" ) == 0 ) {
+			Q.clearStages();
+			Q.stageScene('Endgame');	
+			Q.state.set( "healths", 5 );
+			Q.state.set( "score", 0 );
+			Q.state.set( "finished", 0 );
+		} else {
+
+		}
 	},
 	
 	step: function( dt ) {

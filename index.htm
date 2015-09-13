@@ -40,14 +40,16 @@ Q.input.keyboardControls({
 <script type="text/javascript" src="js/objects/gem.js"></script>
 <script type="text/javascript" src="js/scenes/menu.js"></script>
 <script type="text/javascript" src="js/scenes/endgame.js"></script>
+<script type="text/javascript" src="js/scenes/map.js"></script>
 <script type="text/javascript" src="js/scenes/lvl1.js"></script>
+<script type="text/javascript" src="js/scenes/lvl2.js"></script>
 <script type="text/javascript" src="js/scenes/stats.js"></script>
 <script type="text/javascript" src="js/scenes/skills.js"></script>
 <script type="text/javascript">
 /**
 * Loading components and game loop
 */
-Q.load( "tiles.jpg, tiles_castle.png, level_1.json, level_1_background.jpg, player.png, enemy.jpeg, bullet.jpeg, lvl1.tmx, background.png, gem.png, portal.png", function() {
+Q.load( "tiles.jpg, tiles_castle.png, player.png, enemy.jpeg, bullet.jpeg, map.tmx, lvl1.tmx, lvl2.tmx, background.png, gem.png, portal.png, orb.png", function() {
 	Q.sheet( "tiles","tiles.jpg", { 
 		tilew: 50, 
 		tileh: 50
@@ -58,6 +60,9 @@ Q.load( "tiles.jpg, tiles_castle.png, level_1.json, level_1_background.jpg, play
 	});
 	Q.stageScene( "Menu" );
 	Q.state.set( "healths", 5 );
+
+	Q.state.set( "score", 0 );
+	Q.state.set( "finished", 0 );
 });
 </script>
 
