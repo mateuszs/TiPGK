@@ -22,6 +22,11 @@ Q.Sprite.extend( "Player", {
 	},
 	
 	collision: function( col ) {
+		if( Q.state.get( "healths" ) == 0 ) {
+			Q.clearStages();
+			Q.stageScene('Endgame');	
+		} 
+		
 		if( col.obj.isA( "EnemySoldier" ) || col.obj.isA( "Spike" )) {
 			Q.state.dec( "healths", 1 );
 			this.destroy();
@@ -37,7 +42,7 @@ Q.Sprite.extend( "Player", {
 			Q.state.set( "score", 0 );
 			Q.state.set( "finished", 0 );
 		} else {
-		
+
 		}
 	},
 	
