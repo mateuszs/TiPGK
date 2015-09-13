@@ -19,7 +19,7 @@ Q.scene( "Menu", function( stage ) {
 
 	buttonStartTMX.on( "click", function() {
 		Q.clearStages();
-		Q.stageScene( "Lvl1" );
+		Q.stageScene( "Map" );
 	});
 
 	container.fit( 20 );

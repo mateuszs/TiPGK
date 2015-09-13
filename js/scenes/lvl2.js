@@ -1,15 +1,15 @@
 /**
 * Level tmx scene
 */
-Q.scene( "Lvl1", function( stage ) {
+Q.scene( "Lvl2", function( stage ) {
 	stage.insert( new Q.Repeater({ 
 		asset: "background.png",
 	    speedX: 0.5,
 	    speedY: 0.5,
 	    scale: 1 
 	}));
-	Q.gravityY = 450;
-	Q.stageTMX( "lvl1.tmx" , stage);
+	Q.gravityY = 300;
+	Q.stageTMX( "lvl2.tmx" , stage);
 	
 	var player = Q( "Player" ).first();
 	
