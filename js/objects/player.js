@@ -7,7 +7,8 @@ Q.Sprite.extend( "Player", {
 			healths: 5,
 			sprite: "human",
 			sheet: "playersheet",
-			x: 200
+			x: 200,
+			jumpSpeed: Q.state.get("js") - Q.state.get("skilljs")
 		});
 		
 		this.add( "2d, platformerControls, animation" );

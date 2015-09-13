@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="120" height="56" tilewidth="16" tileheight="16" nextobjectid="277">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="120" height="56" tilewidth="16" tileheight="16" nextobjectid="286">
  <tileset firstgid="1" name="tiles_castle" tilewidth="16" tileheight="16" tilecount="256">
   <image source="../../test/images/tiles_castle.png" trans="ff00ff" width="256" height="256"/>
   <tile id="194">
@@ -14270,99 +14270,99 @@
    <tile gid="26"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="66"/>
+   <tile gid="0"/>
    <tile gid="67"/>
    <tile gid="68"/>
    <tile gid="69"/>
-   <tile gid="70"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="66"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="67"/>
    <tile gid="68"/>
    <tile gid="69"/>
-   <tile gid="70"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="66"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="67"/>
    <tile gid="68"/>
    <tile gid="69"/>
-   <tile gid="70"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="66"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="67"/>
    <tile gid="68"/>
    <tile gid="69"/>
-   <tile gid="70"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="66"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="67"/>
    <tile gid="68"/>
    <tile gid="69"/>
-   <tile gid="70"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="66"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="67"/>
    <tile gid="68"/>
    <tile gid="69"/>
-   <tile gid="70"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="66"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="67"/>
    <tile gid="68"/>
    <tile gid="69"/>
-   <tile gid="70"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="66"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="67"/>
    <tile gid="68"/>
    <tile gid="69"/>
-   <tile gid="70"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="66"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="67"/>
    <tile gid="68"/>
    <tile gid="69"/>
-   <tile gid="70"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -20322,12 +20322,12 @@
   <object id="255" gid="274" x="1120" y="496" width="16" height="16"/>
   <object id="256" gid="274" x="688" y="496" width="16" height="16"/>
   <object id="257" gid="274" x="512" y="496" width="16" height="16"/>
-  <object id="258" gid="274" x="456" y="740" width="16" height="16"/>
+  <object id="258" gid="274" x="456" y="720" width="16" height="16"/>
   <object id="259" gid="274" x="312" y="640" width="16" height="16"/>
-  <object id="260" gid="274" x="584" y="736" width="16" height="16"/>
+  <object id="260" gid="274" x="584" y="800" width="16" height="16"/>
   <object id="261" gid="274" x="824" y="736" width="16" height="16"/>
   <object id="262" gid="274" x="1544" y="640" width="16" height="16"/>
-  <object id="263" gid="274" x="1656" y="736" width="16" height="16"/>
+  <object id="263" gid="274" x="1656" y="800" width="16" height="16"/>
   <object id="264" gid="274" x="1304" y="736" width="16" height="16"/>
   <object id="268" gid="257" x="68" y="272" width="42" height="48"/>
   <object id="269" gid="277" x="1296" y="272" width="32" height="48"/>
@@ -20336,5 +20336,8 @@
   <object id="272" gid="277" x="752" y="560" width="32" height="48"/>
   <object id="273" gid="277" x="592" y="560" width="32" height="48"/>
   <object id="274" gid="277" x="432" y="560" width="32" height="48"/>
+  <object id="279" gid="274" x="1080" y="640" width="16" height="16"/>
+  <object id="280" gid="274" x="1448" y="720" width="16" height="16"/>
+  <object id="281" gid="274" x="1752" y="720" width="16" height="16"/>
  </objectgroup>
 </map>

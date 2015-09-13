@@ -8,7 +8,8 @@ Q.scene( "Map", function( stage ) {
 	    speedY: 0.5,
 	    scale: 1 
 	}));
-	Q.gravityY = 450;
+	Q.gravityY = 980;
+	Q.state.set("js", -400);
 	Q.stageTMX( "map.tmx" , stage);
 	stage.insert(new Q.OrbLvl1({
 		x: 324,

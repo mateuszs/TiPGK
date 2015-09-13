@@ -8,19 +8,43 @@ Q.scene( "Skills", function( stage ){
 		fill: "rgba(0,255,0,0.5)"
 	}));
 	
-	var buttonBuyLife = container.insert( new Q.UI.Button({
+	var buttonClose = container.insert( new Q.UI.Button({
 		x: 30,
 		y: 30,
+		fill: "#CCCCCC",
+		label: "Close"
+	}));
+	
+	var buttonBuyLife = container.insert( new Q.UI.Button({
+		x: 30,
+		y: 100,
 		fill: "#CCCCCC",
 		label: "Buy a life (200 points)"
 	}));
 	
-	var buttonClose = container.insert( new Q.UI.Button({
-		x: 30,
-		y: 100,
-		fill: "#CCCCCC",
-		label: "Close"
-	}));
+	if  (Q.state.get( "skilljs" ) < 100 ) {
+		var buttonBuyJump = container.insert( new Q.UI.Button({
+			x: 30,
+			y: 170,
+			fill: "#CCCCCC",
+			label: "Higher jump (750 points, since new map)"
+		}));
+	
+		buttonBuyJump.on( "click", function() {
+			var points = Q.state.get( "score" );
+			
+			if( points >= 750) {
+					if ( Q.state.get( "skilljs" ) < 90 ) {
+						Q.state.dec( "score", 750 );
+						Q.state.inc( "skilljs", 25 );
+					} else {
+						alert ( "Max level!")
+					}
+			} else {
+				alert( "Not enough points!" );
+			}
+		});
+	};
 
 	
 	buttonClose.on( "click", function() {
