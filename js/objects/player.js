@@ -5,11 +5,12 @@ Q.Sprite.extend( "Player", {
 	init: function( parameters ) {
 		this._super( parameters, {
 			healths: 5,
-			asset: "player.png",
+			sprite: "human",
+			sheet: "playersheet",
 			x: 200
 		});
 		
-		this.add( "2d, platformerControls" );
+		this.add( "2d, platformerControls, animation" );
 		this.on( "hit", this, "collision" );
 		
 		Q.input.on( "skills", this, "openSkills" );
@@ -47,5 +48,20 @@ Q.Sprite.extend( "Player", {
 	
 	step: function( dt ) {
 		this.stage.collide( this );
+		if((this.p.vx) > 0 && (this.p.vy == 0)) {
+			this.play("run_right");
+		} else if((this.p.vx) < 0 && (this.p.vy == 0)) {
+			this.play("run_left");
+		} else if((this.p.vx) > 0 && (this.p.vy < 0)) {
+			this.play("jump_right");
+		} else if((this.p.vx) < 0 && (this.p.vy < 0)) {
+			this.play("jump_left");
+		} else if((this.p.vx) > 0 && (this.p.vy > 0)) {
+			this.play("fall_right");
+		} else if((this.p.vx) < 0 && (this.p.vy > 0)) {
+			this.play("fall_left");
+		} else {
+			this.play("stand");
+		}
 	}
 });
