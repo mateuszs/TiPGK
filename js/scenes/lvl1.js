@@ -11,7 +11,7 @@ Q.scene( "Lvl1", function( stage ) {
 
 	Q.state.set( "score", 0 );
 
-	Q.gravityY = 450;
+	Q.gravityY = 300;
 	Q.stageTMX( "lvl1.tmx" , stage);
 	
 	var player = Q( "Player" ).first();

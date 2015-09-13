@@ -5,7 +5,10 @@
 	top: 10px; 
 	left: 20px; 
 	display: none;
-	color: white;
+	color: red;
+	font-family: 'Century Gothic';
+	font-weight: bold;
+	font-size: 19pt;
 }
 
 #experience {
@@ -16,4 +19,8 @@
 #healths {
 	float: left;
 	
+}
+
+#info {
+	color: white;
 }

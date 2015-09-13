@@ -8,6 +8,9 @@ Q.scene( "Lvl2", function( stage ) {
 	    speedY: 0.5,
 	    scale: 1 
 	}));
+	
+	Q.state.set( "score", 0 );
+	
 	Q.gravityY = 300;
 	Q.stageTMX( "lvl2.tmx" , stage);
 	
