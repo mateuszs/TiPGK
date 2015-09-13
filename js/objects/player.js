@@ -21,20 +21,19 @@ Q.Sprite.extend( "Player", {
 	},
 	
 	collision: function( col ) {
+		if( Q.state.get( "healths" ) == 0 ) {
+			Q.clearStages();
+			Q.stageScene('Endgame');	
+		} 
+		
 		if( col.obj.isA( "EnemySoldier" ) || col.obj.isA( "Spike" )) {
 			Q.state.dec( "healths", 1 );
 			this.destroy();
 			
 			Q.clearStages();
 			Q.stageScene('Lvl1');	
-		}
+		} 
 		
-		if( Q.state.get( "healths" ) == 0 ) {
-			Q.clearStages();
-			Q.stageScene('Endgame');	
-		} else {
-		
-		}
 	},
 	
 	step: function( dt ) {

@@ -8,7 +8,8 @@ Q.scene( "Lvl1", function( stage ) {
 	    speedY: 0.5,
 	    scale: 1 
 	}));
-	
+	Q.state.set( "score", 0 );
+
 	Q.stageTMX( "lvl1.tmx" , stage);
 	
 	var player = Q( "Player" ).first();

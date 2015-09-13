@@ -10,9 +10,10 @@
 
 #experience {
 	float: left;
+	width: 100%
 }
 
 #healths {
 	float: left;
-	margin-left: 50px;
+	
 }
