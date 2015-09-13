@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="19" tilewidth="16" tileheight="16" nextobjectid="484">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="19" tilewidth="16" tileheight="16" nextobjectid="485">
  <tileset firstgid="1" name="tiles_castle" tilewidth="16" tileheight="16" tilecount="256">
   <image source="../images/tiles_castle.png" trans="ff00ff" width="256" height="256"/>
   <tile id="194">
@@ -38,23 +38,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="257" name="player" tilewidth="32" tileheight="64" tilecount="1">
-  <image source="../images/player.png" width="32" height="64"/>
-  <tile id="0">
-   <properties>
-    <property name="Class" value="Player"/>
-   </properties>
-  </tile>
- </tileset>
- <tileset firstgid="258" name="portal" tilewidth="32" tileheight="64" tilecount="1">
-  <image source="../images/portal.png" width="32" height="64"/>
-  <tile id="0">
-   <properties>
-    <property name="Class" value="PortalInA"/>
-   </properties>
-  </tile>
- </tileset>
- <tileset firstgid="259" name="gem" tilewidth="16" tileheight="16" tilecount="1">
+ <tileset firstgid="257" name="gem" tilewidth="16" tileheight="16" tilecount="1">
   <image source="../images/gem.png" width="16" height="16"/>
   <tile id="0">
    <properties>
@@ -62,54 +46,13 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="260" name="enemy" tilewidth="32" tileheight="32" tilecount="1">
-  <image source="../images/enemy.jpeg" width="32" height="32"/>
-  <tile id="0">
+ <tileset firstgid="258" name="playersheet" tilewidth="42" tileheight="48" tilecount="16">
+  <image source="../images/playersheet.png" width="168" height="192"/>
+  <tile id="2">
    <properties>
-    <property name="Class" value="EnemySoldier"/>
+    <property name="Class" value="Player"/>
    </properties>
   </tile>
- </tileset>
- <tileset firstgid="261" name="tiles_castle" tilewidth="16" tileheight="16" tilecount="256">
-  <image source="../../test/images/tiles_castle.png" trans="ff00ff" width="256" height="256"/>
-  <tile id="194">
-   <properties>
-    <property name="Class" value="Spike"/>
-   </properties>
-  </tile>
-  <tile id="196">
-   <properties>
-    <property name="Class" value="Spike"/>
-   </properties>
-  </tile>
-  <tile id="212">
-   <properties>
-    <property name="Class" value="Spike"/>
-   </properties>
-  </tile>
-  <tile id="225">
-   <properties>
-    <property name="Class" value="Spike"/>
-   </properties>
-  </tile>
-  <tile id="226">
-   <properties>
-    <property name="Class" value="Spike"/>
-   </properties>
-  </tile>
-  <tile id="227">
-   <properties>
-    <property name="Class" value="Spike"/>
-   </properties>
-  </tile>
-  <tile id="228">
-   <properties>
-    <property name="Class" value="Spike"/>
-   </properties>
-  </tile>
- </tileset>
- <tileset firstgid="517" name="orb" tilewidth="32" tileheight="32" tilecount="1">
-  <image source="../images/orb.png" width="32" height="32"/>
  </tileset>
  <layer name="BackgroundWall" width="40" height="19">
   <properties>
@@ -1647,6 +1590,6 @@
   </data>
  </layer>
  <objectgroup name="Objects" opacity="0.9">
-  <object id="483" name="Player" gid="257" x="80" y="272" width="32" height="64"/>
+  <object id="484" gid="260" x="76" y="272" width="42" height="48"/>
  </objectgroup>
 </map>

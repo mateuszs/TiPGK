@@ -31,6 +31,18 @@ Q.input.keyboardControls({
 	S: "skills"
 });
 	
+Q.animations('human', {
+	run_right: { frames: [8,9,10,11], rate: 1/5}, 
+	run_left: { frames: [4,5,6,7], rate: 1/5 },
+	jump_right: { frames: [9], rate: 1/5}, 
+	jump_left: { frames: [5], rate: 1/5 },
+	stand: { frames: [3], rate: 1/5 },
+	stand_right: { frames: [8], rate: 1/5 },
+	stand_left: { frames: [4], rate: 1/5 },
+	fall_right: { frames: [8], loop: false },
+	fall_left: { frames: [4], loop: false }
+});
+
 </script>
 <link rel="stylesheet" href="css/style.css">
 <script type="text/javascript" src="js/settings.js"></script>
@@ -49,7 +61,7 @@ Q.input.keyboardControls({
 /**
 * Loading components and game loop
 */
-Q.load( "tiles.jpg, tiles_castle.png, player.png, enemy.jpeg, bullet.jpeg, map.tmx, lvl1.tmx, lvl2.tmx, background.png, gem.png, portal.png, orb.png", function() {
+Q.load( "tiles.jpg, tiles_castle.png, playersheet.png, enemysheet.png, map.tmx, lvl1.tmx, lvl2.tmx, background.png, gem.png, portal.png, orb.png", function() {
 	Q.sheet( "tiles","tiles.jpg", { 
 		tilew: 50, 
 		tileh: 50
@@ -57,6 +69,14 @@ Q.load( "tiles.jpg, tiles_castle.png, player.png, enemy.jpeg, bullet.jpeg, map.t
 	Q.sheet( "tiles_castle","tiles_castle.png", { 
 		tileW: 16, 
 		tileH: 16
+	});
+	Q.sheet( "playersheet","playersheet.png", { 
+		tileW: 42, 
+		tileH: 48
+	});
+	Q.sheet( "enemysheet","enemysheet.png", { 
+		tileW: 32, 
+		tileH: 48
 	});
 	Q.stageScene( "Menu" );
 	Q.state.set( "healths", 5 );
